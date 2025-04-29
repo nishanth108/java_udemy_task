@@ -1,0 +1,40 @@
+package pack_for_Stack;
+
+public class TestStack {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	class Stack {
+		int stac[] = new int[10];
+		int tos;
+		
+		//intialize top of the stack
+		Stack() {
+			tos = -1;
+		}
+		
+		//push the item on to the stack
+		void push(int item) 
+		{
+			if(tos == 9)
+				System.out.println("Stack is full");
+			else {
+				stac[++tos] = item;
+				return stac;
+			}
+		}
+		
+		//pop the item from the stack
+		int pop() {
+			if(tos==-1) 
+				System.out.println("Stack is underflow");
+			else {
+				stac[item--];
+				return stac;
+			}
+		}
+	}
+	}
+
+}

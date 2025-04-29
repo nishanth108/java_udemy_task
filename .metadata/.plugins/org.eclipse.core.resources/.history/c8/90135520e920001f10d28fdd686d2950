@@ -1,0 +1,44 @@
+package pack_for_thridMax;
+
+
+
+	
+public class ThirdMax {
+	
+	
+	public int TMax(int[] arr) {
+		int f =Integer.MIN_VALUE;
+		int s = Integer.MIN_VALUE;
+		int t = Integer.MIN_VALUE;
+		int max = arr[0];
+		for (int i = 1; i < arr.length-1 ; i++) {
+			if( max < arr[i]) {
+				max = arr[i];
+				f = max;
+				s = f;
+				t = s;
+			}
+			
+			else if(arr[i] >  s  && arr[i] != f) {
+				s = arr[i];
+				t = s;
+			}
+			
+			else if(arr[i] >  t  && arr[i] != s) {
+				t = arr[i];
+			}
+		}
+		return t;
+	}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ThirdMax m = new ThirdMax();
+		int[] arr = {14,1,4,7,4};
+		 int t = m.TMax(arr);
+		System.out.println("The third max value is "+t);
+		
+	}
+
+}
